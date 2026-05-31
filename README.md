@@ -24,20 +24,22 @@ the rest: archiving, scoring, error-banking, trend charts, and the next plan.
 
 ## Highlights
 
-**1. You speak out loud — and nothing is forgotten.**
-Real conversation and listening happen by voice in the Claude app; every session
-comes back as a graded report and a verbatim record. What used to be ephemeral
-"talking to an AI" becomes a permanent, measurable climb toward native fluency.
+**1. One subscription, two pastes, long-term practice.**
+No new app, no extra account, no fee beyond the Claude subscription you already
+have. Each round is just two copy-pastes — the prompt out, the report back — yet
+they compound: a few minutes of speaking becomes weeks of tracked progress
+instead of practice you forget by tomorrow.
 
-**2. A mistake bank that hunts your recurring errors until they're gone.**
-Every stumble, grammar slip, and unnatural phrase is logged and tagged. Patterns
+**2. A graded report after every session.**
+The moment you finish, you get a clear scorecard: an estimated CEFR / IELTS
+level, a "distance to native /100", and seven 1–10 dimensions — fluency, lexis,
+grammar, pronunciation, discourse, interaction, listening. Progress becomes
+something you can see, not just feel.
+
+**3. A mistake bank that hunts your recurring errors until they're gone.**
+Every stumble, grammar slip, and unnatural phrase is logged verbatim. Patterns
 that keep coming back are confirmed, counted, and re-drilled each session — and
 retired only once you go clean.
-
-**3. Private, bilingual, and almost zero setup.**
-Your records live only on your machine — no uploads, no telemetry. The skill
-replies in whatever language you write in (English or 中文), and all you need is
-Claude Code and the Claude app.
 
 ---
 
