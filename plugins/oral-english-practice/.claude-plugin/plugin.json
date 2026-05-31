@@ -1,0 +1,9 @@
+{
+  "name": "oral-english-practice",
+  "description": "Long-term spoken-English coaching tracker. Practice by voice in the Claude app; this plugin turns each session into durable progress — scored reports, a verbatim mistake bank, trend charts, and an adaptive next-session focus.",
+  "version": "1.1.0",
+  "author": {
+    "name": "XcutingUnicorn235"
+  },
+  "homepage": "https://github.com/XcutingUnicorn235/Oral-English-Practice"
+}

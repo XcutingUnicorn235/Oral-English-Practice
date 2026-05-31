@@ -87,9 +87,20 @@ Claude App（练习场，无记性）            Claude Code + 本 skill（长�
 
 ## 安装 Installation
 
+### 推荐 —— 作为 Claude Code 插件安装
+
+```
+/plugin marketplace add XcutingUnicorn235/Oral-English-Practice
+/plugin install oral-english-practice@xcutingunicorn235
+```
+
+一条命令安装,还能自动更新(`/plugin marketplace update`)。
+
+### 备选 —— 脚本 / 手动
+
 - **Windows**：双击 `install.bat`
 - **macOS / Linux**：`bash install.sh`
-- **手动**：把 `oral-english-practice/` 文件夹拷进 `~/.claude/skills/`
+- **手动**：把 `plugins/oral-english-practice/skills/oral-english-practice/` 拷进 `~/.claude/skills/`
 
 重复运行安装脚本是安全的——它不碰你的数据。
 
@@ -131,15 +142,15 @@ skill 第一次创建时会**把完整路径打印给你**。
 | `mistakes.md` | 错题银行 —— 确诊的反复错误，带频次 + 状态，反复操练直到攻克 |
 | `sessions/` | 每次完整报告（`session-NN-YYYY-MM-DD.md`） |
 | `next-focus.md` | 衔接卡；含一段可直接贴进 App 的下次重点 |
-| `backups/` | 每次写入前的带时间戳快照（留最近 10 份） |
+| `backups/` | 每次写入前的带时间戳快照（可选的 Python 助手会剪枝到最近 10 份） |
 
 ### data.csv 列
 
 ```
-date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction,listening
+session,date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction,listening
 ```
 
-每个维度 1–10 分；`native` 是「距母语」满分 100；某个维度无法判断（如纯文本时的发音）记为 `NA`。
+`session` 是整数场次号（主键）。每个维度 1–10 分；`native` 是「距母语」满分 100；某个维度无法判断（如纯文本时的发音）记为 `NA`。v1.x 的旧日志（没有 `session` 列）会在首次使用时自动迁移。
 
 ### 标注标签（在 `transcripts.md` 里）
 
@@ -173,8 +184,9 @@ date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction
 
 ## 分享 Sharing
 
-整个文件夹可移植。发给朋友，他跑安装脚本（或把 `oral-english-practice/` 拖进自己的
-`~/.claude/skills/`）。他的数据在他自己电脑上全新生成——**skill 是引擎，数据是个人的**——
+把这个仓库指给朋友即可：他用上面两条 `/plugin` 命令装插件，或把
+`plugins/oral-english-practice/skills/oral-english-practice/` 拖进自己的
+`~/.claude/skills/`。他的数据在他自己电脑上全新生成——**skill 是引擎，数据是个人的**——
 所以你的任何记录都不会跟着传过去。
 
 ---
@@ -184,6 +196,13 @@ date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction
 遵循 Claude 官方 `skill-creator` 最佳实践，并借鉴 `fluent` 语言学习套件的模式——错题银行、
 写前备份、自适应难度信号——同时刻意保持轻量（CSV + Markdown，不上数据库），专注单人、
 母语级目标。
+
+---
+
+## 更新日志 Changelog
+
+版本历史见 [CHANGELOG.md](CHANGELOG.md)。最新：**v1.1.0** —— 数据完整性加固
+（免 Python 备份、写入前校验、带版本号的数据格式、更聪明的错题库）。
 
 ---
 

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "xcutingunicorn235",
+  "description": "Skills by XcutingUnicorn235 for Claude Code. Currently: Oral English Practice, a long-term spoken-English coaching tracker.",
+  "owner": {
+    "name": "XcutingUnicorn235"
+  },
+  "plugins": [
+    {
+      "name": "oral-english-practice",
+      "source": "./plugins/oral-english-practice",
+      "description": "Turn each Claude-app voice session into durable progress: scored reports, a verbatim mistake bank, trend charts, and an adaptive next-session focus. The app practices; this plugin remembers and analyzes.",
+      "author": {
+        "name": "XcutingUnicorn235"
+      },
+      "category": "learning",
+      "tags": ["english", "language-learning", "speaking", "listening", "ielts", "toefl", "coaching"],
+      "homepage": "https://github.com/XcutingUnicorn235/Oral-English-Practice"
+    }
+  ]
+}

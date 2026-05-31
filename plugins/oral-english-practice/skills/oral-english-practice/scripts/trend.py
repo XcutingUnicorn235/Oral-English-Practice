@@ -23,7 +23,8 @@ DIMENSIONS = [
 
 
 def load(csv_path):
-    with open(csv_path, newline="", encoding="utf-8") as f:
+    # utf-8-sig so a stray BOM on the header never corrupts the first column name
+    with open(csv_path, newline="", encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
     if not rows:
         print("No sessions logged yet — data.csv is empty.")
@@ -61,7 +62,11 @@ def main():
     out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(
         os.path.dirname(os.path.abspath(csv_path)), "trend.png")
 
-    x = list(range(1, len(rows) + 1))  # session number
+    # Prefer the explicit session column (schema v2); fall back to row order (v1).
+    def session_of(i, r):
+        s = to_float(r.get("session"))
+        return int(s) if s is not None else i + 1
+    x = [session_of(i, r) for i, r in enumerate(rows)]
     labels = [r.get("date", "") for r in rows]
 
     fig, (ax1, ax2) = plt.subplots(

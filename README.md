@@ -98,9 +98,21 @@ Claude app (practice, stateless)         Claude Code + this skill (long-term bra
 
 ## Installation
 
+### Recommended — install as a Claude Code plugin
+
+```
+/plugin marketplace add XcutingUnicorn235/Oral-English-Practice
+/plugin install oral-english-practice@xcutingunicorn235
+```
+
+One command, plus automatic updates (`/plugin marketplace update`).
+
+### Fallback — script / manual
+
 **Windows:** double-click `install.bat`.
 **macOS / Linux:** `bash install.sh`.
-**Manual:** copy the `oral-english-practice/` folder into `~/.claude/skills/`.
+**By hand:** copy `plugins/oral-english-practice/skills/oral-english-practice/`
+into `~/.claude/skills/`.
 
 Re-running the installer is safe — it never touches your data.
 
@@ -147,17 +159,18 @@ The skill prints the full path the first time it creates the folder.
 | `mistakes.md` | Mistake bank — confirmed recurring errors with frequency + status, re-drilled until fixed |
 | `sessions/` | Full report per session (`session-NN-YYYY-MM-DD.md`) |
 | `next-focus.md` | Carry-over card; includes a block to paste into the app next time |
-| `backups/` | Timestamped snapshots taken before each logging write (last 10 kept) |
+| `backups/` | Timestamped snapshots taken before each logging write (the optional Python helper prunes them to the last 10) |
 
 ### data.csv columns
 
 ```
-date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction,listening
+session,date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction,listening
 ```
 
-Scores are 1-10 per dimension; `native` is distance-to-native out of 100; a
-dimension that couldn't be judged (e.g. pronunciation in a text-only session)
-is recorded as `NA`.
+`session` is the integer session number (the primary key). Scores are 1-10 per
+dimension; `native` is distance-to-native out of 100; a dimension that couldn't
+be judged (e.g. pronunciation in a text-only session) is recorded as `NA`.
+Logs from v1.x (no `session` column) are migrated automatically on first use.
 
 ### Annotation tags (in `transcripts.md`)
 
@@ -197,10 +210,11 @@ is recorded as `NA`.
 
 ## Sharing
 
-This whole folder is portable. Send it to a friend; they run the installer (or
-drop `oral-english-practice/` into their `~/.claude/skills/`). Their data is
-created fresh on their own machine — **the skill is the engine, the data is
-personal** — so nothing of yours travels with it.
+Just point a friend at this repo: they install the plugin (the two `/plugin`
+commands above), or drop
+`plugins/oral-english-practice/skills/oral-english-practice/` into their
+`~/.claude/skills/`. Their data is created fresh on their own machine — **the
+skill is the engine, the data is personal** — so nothing of yours travels with it.
 
 ---
 
@@ -211,6 +225,14 @@ patterns from the `fluent` language-learning kit — a mistake bank,
 write-before-write backups, and an adaptive-difficulty signal — while staying
 deliberately lightweight (CSV + Markdown, no databases) for a single-user,
 native-level goal.
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the version history. Latest: **v1.1.0** —
+data-integrity hardening (Python-free backups, validated logging, schema-versioned
+data, smarter mistake bank).
 
 ---
 

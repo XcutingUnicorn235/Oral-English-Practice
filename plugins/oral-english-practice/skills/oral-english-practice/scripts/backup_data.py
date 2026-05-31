@@ -8,8 +8,11 @@ Copies data.csv, transcripts.md, mistakes.md, next-focus.md into
 <DATA_DIR>/backups/<UTC-timestamp>/ so a bad parse can never lose history.
 Keeps the most recent `keep` snapshots (default 10) and deletes older ones.
 
-Deterministic, dependency-free (stdlib only) — safe to call on every Mode B
-write. Missing source files are skipped silently (first run may not have all).
+OPTIONAL convenience: the skill's safety-net backup is a plain file copy that
+needs no runtime (so it can never silently fail when Python is missing). This
+script does the same copy PLUS prunes old snapshots — use it only when a working
+Python is present. Deterministic, stdlib-only. Missing source files are skipped
+silently (first run may not have all). copy2 preserves bytes verbatim.
 """
 import os
 import shutil

@@ -94,7 +94,10 @@ unnatural. Quote my real words.)
 
 === END-OF-SESSION REPORT (give this EVERY time, AFTER the transcript) ===
 
-Produce a consistent, trackable report so I can log my progress over time:
+Produce a consistent, trackable report so I can log my progress over time.
+If I pasted a FOCUS block before this session, add a first line
+"Focus applied: ..." briefly noting how you worked on it; if I gave you none,
+write "Focus applied: none given."
 
 SESSION REPORT — [today's date]
 
@@ -116,8 +119,8 @@ Listening — what you missed today: ...
 Did well: ...
 Focus next session: ...
 
-DATA BLOCK (for my log, keep this EXACT one-line format):
-date=YYYY-MM-DD | cefr=__ | ielts=__ | native=__/100 | fluency=__ | lexis=__ | grammar=__ | pronunciation=__ | discourse=__ | interaction=__ | listening=__
+DATA BLOCK (for my log, keep this EXACT one-line format, including the leading v=2):
+v=2 | date=YYYY-MM-DD | cefr=__ | ielts=__ | native=__/100 | fluency=__ | lexis=__ | grammar=__ | pronunciation=__ | discourse=__ | interaction=__ | listening=__
 
 === START NOW ===
 Greet me warmly and open with a fresh, random topic of your choice (don't ask

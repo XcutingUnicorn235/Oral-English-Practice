@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
-# Oral English Practice — macOS / Linux installer
+# Oral English Practice — macOS / Linux installer (fallback)
 # Usage: bash install.sh
 #
-# Copies the oral-english-practice skill folder into ~/.claude/skills/ so
-# Claude Code can find it. Your practice DATA is created separately on first
-# use (defaults to ~/oral-english-practice-log/) — this script does not touch any data,
-# so re-running it is safe.
+# RECOMMENDED instead of this script: install as a Claude Code plugin —
+#   /plugin marketplace add XcutingUnicorn235/Oral-English-Practice
+#   /plugin install oral-english-practice@xcutingunicorn235
+# (gives one-command install + automatic updates).
+#
+# This script is the manual fallback: it copies the skill folder into
+# ~/.claude/skills/ so Claude Code can find it. Your practice DATA is created
+# separately on first use (defaults to ~/oral-english-practice-log/) — this
+# script does not touch any data, so re-running it is safe.
 
 set -e
 
@@ -15,13 +20,13 @@ DST="$HOME/.claude/skills/oral-english-practice"
 echo
 echo "=== Oral English Practice — install ==="
 echo
-echo "Source: $SRC/oral-english-practice"
+echo "Source: $SRC/plugins/oral-english-practice/skills/oral-english-practice"
 echo "Target: $DST"
 echo
 
 mkdir -p "$HOME/.claude/skills"
 mkdir -p "$DST"
-cp -R "$SRC/oral-english-practice/." "$DST/"
+cp -R "$SRC/plugins/oral-english-practice/skills/oral-english-practice/." "$DST/"
 echo "[DONE] skill copied"
 
 echo

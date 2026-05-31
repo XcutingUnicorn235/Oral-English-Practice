@@ -27,7 +27,7 @@ Number within type to disambiguate: G1, G2, V1, N1, F1, P1...
 ## Format (one block per session)
 
 ```
-## YYYY-MM-DD — Session N
+## YYYY-MM-DD — Session NN
 Topic: ...
 
 Me: I go[G1] to the mall yesterday and I want[G2] to buy a jacket, but I

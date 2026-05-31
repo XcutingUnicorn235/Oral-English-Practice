@@ -1,9 +1,13 @@
 @echo off
-REM Oral English Practice — Windows installer
+REM Oral English Practice — Windows installer (fallback)
 REM Usage: double-click this file, or run it in cmd.
 REM
-REM What it does:
-REM   Copies the oral-english-practice skill folder into
+REM RECOMMENDED instead of this script: install as a Claude Code plugin —
+REM   /plugin marketplace add XcutingUnicorn235/Oral-English-Practice
+REM   /plugin install oral-english-practice@xcutingunicorn235
+REM   (gives one-command install + automatic updates).
+REM
+REM This script is the manual fallback: it copies the skill folder into
 REM   %USERPROFILE%\.claude\skills\ so Claude Code can find it.
 REM   Your practice DATA is created separately on first use
 REM   (defaults to %USERPROFILE%\oral-english-practice-log\) — this script does NOT
@@ -18,14 +22,14 @@ set "DST=%USERPROFILE%\.claude\skills\oral-english-practice"
 echo.
 echo === Oral English Practice — install ===
 echo.
-echo Source: %SRC%oral-english-practice
+echo Source: %SRC%plugins\oral-english-practice\skills\oral-english-practice
 echo Target: %DST%
 echo.
 
 if not exist "%USERPROFILE%\.claude\skills" mkdir "%USERPROFILE%\.claude\skills"
 if not exist "%DST%" mkdir "%DST%"
 
-xcopy /E /I /Y /Q "%SRC%oral-english-practice" "%DST%" >nul
+xcopy /E /I /Y /Q "%SRC%plugins\oral-english-practice\skills\oral-english-practice" "%DST%" >nul
 if errorlevel 1 (
     echo [FAILED] copy
 ) else (
