@@ -1,20 +1,43 @@
 # Oral English Practice
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-8A2BE2)](https://claude.com/code)
+
 *English | [中文（先看这里）](【先看这里】.md)*
 
-A long-term spoken-English coaching tracker for Claude Code.
+**Oral English Practice** turns the Claude app into a tireless speaking partner
+and Claude Code into the coach that remembers everything. You practice out
+loud — real conversation and listening — and every session comes back as a
+graded report, a verbatim record of the words you stumbled on, and a clear
+focus for next time. Over weeks, the fleeting act of "talking to an AI" becomes
+a measurable climb toward native-level fluency: your scores trend, your
+recurring mistakes get hunted down one by one, and the difficulty quietly
+adjusts to keep you at your edge.
 
-You practice **speaking and listening by voice in the Claude app**; this skill
-runs in **Claude Code** and turns each session into durable progress: it logs a
-verbatim annotated error transcript, records scores, tracks your trend toward
-native level, and writes the focus for your next session.
+The trick is splitting the work across the two tools that each do half the job.
+The app has a voice but no memory; Claude Code has memory but no voice. This
+skill is the bridge — you carry two short pastes between them, and it handles
+the rest: archiving, scoring, error-banking, trend charts, and the next plan.
 
-It exists to fix the gap between the two tools: the app is a great practice
-arena but has **no memory** of your past sessions; Claude Code has no voice but
-**can be your long-term memory and analyst**. You carry two short text payloads
-between them, and this skill does the rest.
+> **One subscription, two pastes, long-term practice.**
 
-**One subscription, two pastes, long-term practice.**
+---
+
+## Highlights
+
+**1. You speak out loud — and nothing is forgotten.**
+Real conversation and listening happen by voice in the Claude app; every session
+comes back as a graded report and a verbatim record. What used to be ephemeral
+"talking to an AI" becomes a permanent, measurable climb toward native fluency.
+
+**2. A mistake bank that hunts your recurring errors until they're gone.**
+Every stumble, grammar slip, and unnatural phrase is logged and tagged. Patterns
+that keep coming back are confirmed, counted, and re-drilled each session — and
+retired only once you go clean.
+
+**3. Private, bilingual, and almost zero setup.**
+Your records live only on your machine — no uploads, no telemetry. The skill
+replies in whatever language you write in (English or 中文), and all you need is
+Claude Code and the Claude app.
 
 ---
 
@@ -56,7 +79,7 @@ Claude app (practice, stateless)         Claude Code + this skill (long-term bra
 
 ---
 
-## Install
+## Installation
 
 **Windows:** double-click `install.bat`.
 **macOS / Linux:** `bash install.sh`.
@@ -119,9 +142,7 @@ Scores are 1-10 per dimension; `native` is distance-to-native out of 100; a
 dimension that couldn't be judged (e.g. pronunciation in a text-only session)
 is recorded as `NA`.
 
----
-
-## Annotation tags (in transcripts.md)
+### Annotation tags (in `transcripts.md`)
 
 | Tag | Meaning |
 |---|---|
@@ -136,17 +157,24 @@ is recorded as `NA`.
 ## Privacy
 
 - **Your records stay on your computer.** The skill has no network code — no
-  uploads, no telemetry, no analytics, no cloud sync. Your data files
-  (`data.csv`, transcripts, mistakes, sessions, backups) are written only to
-  your local data folder, and `.gitignore` keeps them out of git.
+  uploads, no telemetry, no analytics, no cloud sync. Your data files are
+  written only to your local data folder, and `.gitignore` keeps them out of git.
 - **But the skill runs through Claude, which is a cloud AI.** Using it means
-  talking to Claude Code and the Claude app, so the text you actually process —
-  your reports and your spoken practice — passes through Anthropic's servers as
-  part of normal Claude usage, exactly like any Claude conversation. That's
-  inherent to using an AI model, not the skill sending data anywhere extra.
+  talking to Claude Code and the Claude app, so the text you process — your
+  reports and your spoken practice — passes through Anthropic's servers as part
+  of normal Claude usage, like any Claude conversation. That's inherent to using
+  an AI model, not the skill sending data anywhere extra.
 - **No third parties.** Nothing goes anywhere beyond the Anthropic services you
-  already use by running Claude; there is no separate cloud copy of your
-  practice archive.
+  already use by running Claude; there is no separate cloud copy of your records.
+
+---
+
+## Customizing
+
+- **Coach tone / topics / correction style:** edit the prompt block in your
+  `app-prompt.md`, or just ask your Claude to change it in plain language.
+- **Scored dimensions:** if you change them, keep the DATA BLOCK line and the
+  `data.csv` header in sync, or the skill can't parse new sessions.
 
 ---
 
@@ -155,22 +183,20 @@ is recorded as `NA`.
 This whole folder is portable. Send it to a friend; they run the installer (or
 drop `oral-english-practice/` into their `~/.claude/skills/`). Their data is
 created fresh on their own machine — **the skill is the engine, the data is
-personal**, so nothing of yours travels with it.
+personal** — so nothing of yours travels with it.
 
 ---
 
-## Customizing
+## Acknowledgements
 
-- **Coach tone / topics:** edit the prompt block in your `app-prompt.md`.
-- **Scored dimensions:** if you change them, keep the DATA BLOCK line and the
-  `data.csv` header in sync, or the skill can't parse new sessions.
+Built following Claude's official `skill-creator` best practices and adapting
+patterns from the `fluent` language-learning kit — a mistake bank,
+write-before-write backups, and an adaptive-difficulty signal — while staying
+deliberately lightweight (CSV + Markdown, no databases) for a single-user,
+native-level goal.
 
 ---
 
-## Credits
+## License
 
-Built following Claude's official `skill-creator` best practices (progressive
-disclosure, a trigger-focused description) and adapting patterns from the
-`fluent` language-learning kit — a mistake bank, write-before-write backups, and
-an adaptive-difficulty signal — while staying deliberately lightweight
-(CSV + Markdown, no databases) for a single-user, native-level goal.
+Released under the [MIT License](LICENSE) © 2026 XcutingUnicorn235.
