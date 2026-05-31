@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-8A2BE2)](https://claude.com/code)
 
-*English | [中文（先看这里）](【先看这里】.md)*
+*English | [中文](README.zh-CN.md)*
 
 **Oral English Practice** turns the Claude app into a tireless speaking partner
 and Claude Code into the coach that remembers everything. You practice out
