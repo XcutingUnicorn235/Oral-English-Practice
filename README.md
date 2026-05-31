@@ -169,19 +169,8 @@ personal**, so nothing of yours travels with it.
 
 ## Credits
 
-Structure follows Claude's official `skill-creator` best practices (progressive
-disclosure, trigger-focused description, explain-the-why instructions), and was
-reviewed against the official `skill-reviewer` quality rubric (description
-triggering, lean SKILL.md, working file references, progressive disclosure).
-The logging pipeline was tested end to end (with a throwaway report, then rolled
-back) and hardened along the way — for example an off-by-one session-numbering
-bug was fixed, and write-before-write backups mean a bad parse can never lose
-history.
-
-Design patterns were adapted from the `fluent` language-learning kit and the
-awesome-claude-skills ecosystem — specifically the mistake bank (frequency +
-status), write-before-write backups, an adaptive-difficulty signal, and
-`.gitignore` data privacy — while deliberately staying lightweight
-(CSV + Markdown, no heavyweight databases) for a single-user, native-level goal.
-
-Built collaboratively in Claude Code.
+Built following Claude's official `skill-creator` best practices (progressive
+disclosure, a trigger-focused description) and adapting patterns from the
+`fluent` language-learning kit — a mistake bank, write-before-write backups, and
+an adaptive-difficulty signal — while staying deliberately lightweight
+(CSV + Markdown, no databases) for a single-user, native-level goal.
