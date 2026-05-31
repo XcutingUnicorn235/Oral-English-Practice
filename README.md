@@ -14,6 +14,23 @@ arena but has **no memory** of your past sessions; Claude Code has no voice but
 **can be your long-term memory and analyst**. You carry two short text payloads
 between them, and this skill does the rest.
 
+**One subscription, two pastes, long-term practice.**
+
+---
+
+## Features
+
+- 🎙️ **Ready-made coaching prompt** — paste it into the Claude app and start a native-level voice session (conversation + listening) right away.
+- 📊 **Scored assessment report** every session: a CEFR/IELTS estimate, a "distance to native /100", and seven 1–10 dimensions.
+- 📈 **Long-term progress tracking** — every session logged to `data.csv`, with trend charts (or a text trend if you have no Python).
+- 📝 **Verbatim error transcript** — every stumble, grammar slip, vocab gap, and unnatural phrase tagged inline and explained.
+- 🏦 **Mistake bank** — recurring errors are confirmed, counted, and re-drilled until you go clean, then archived.
+- 🎚️ **Adaptive difficulty** — the next-session focus tells the coach what to ease or push, based on your actual scores.
+- 🎭 **Fully customizable** — change the coach's tone, topics, and correction style in plain language (or by editing one file).
+- 🌐 **Bilingual & language-adaptive** — English / 中文 docs, and the skill replies in whatever language you write in.
+- 🔒 **Local-first & private** — your records stay on your machine; no uploads, telemetry, or third parties.
+- 🪶 **Minimal setup** — just Claude Code + the Claude app; Python/matplotlib is optional (only for chart images).
+
 ---
 
 ## How it works
@@ -156,6 +173,10 @@ Structure follows Claude's official `skill-creator` best practices (progressive
 disclosure, trigger-focused description, explain-the-why instructions), and was
 reviewed against the official `skill-reviewer` quality rubric (description
 triggering, lean SKILL.md, working file references, progressive disclosure).
+The logging pipeline was tested end to end (with a throwaway report, then rolled
+back) and hardened along the way — for example an off-by-one session-numbering
+bug was fixed, and write-before-write backups mean a bad parse can never lose
+history.
 
 Design patterns were adapted from the `fluent` language-learning kit and the
 awesome-claude-skills ecosystem — specifically the mistake bank (frequency +
