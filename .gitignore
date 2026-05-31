@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Generated / test artifacts
+trend.png
+*.log
+
+# Editors
+.vscode/
+.idea/
+
+# Personal practice data — never publish anyone's records
+oral-english-practice-log/
+english-speaking/

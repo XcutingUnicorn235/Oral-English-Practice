@@ -1,0 +1,4 @@
+# Your speaking-practice data is private. If this folder ever lands in a git
+# repo, keep everything out of version control.
+*
+!.gitignore
