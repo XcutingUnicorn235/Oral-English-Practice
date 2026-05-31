@@ -1,12 +1,13 @@
 ---
 name: oral-english-practice
 description: |
-  Long-term spoken-English coaching tracker. Use whenever the user pastes an
-  English speaking-practice report from the Claude app, mentions "口语训练/口语
-  练习" or oral/spoken English practice, asks to log a speaking session, wants
-  the app practice prompt, or wants their speaking-progress trend — even if
-  unnamed. Parses the annotated transcript and scores, files them, maintains a
-  mistake bank, tracks the trend to native level, and writes next-session focus.
+  Long-term spoken-English coaching tracker. This skill should be used whenever
+  the user pastes an English speaking-practice report from the Claude app,
+  mentions "口语训练" / "口语练习" or oral/spoken English practice, asks to log a
+  speaking session, wants the app practice prompt, or wants their
+  speaking-progress trend — even if unnamed. Parses the annotated transcript and
+  scores, files them, maintains a mistake bank, tracks the trend to native
+  level, and writes next-session focus.
 metadata:
   version: 1.0.0
 ---
