@@ -43,6 +43,21 @@ retired only once you go clean.
 
 ---
 
+## Who it's for
+
+- **IELTS / TOEFL / PTE candidates** — the speaking section is the hardest part
+  to practice alone. Here you get unlimited spoken practice with a graded report
+  and targeted drills after every session.
+- **Anyone living, working, or studying in an English-speaking country** — build
+  the confidence to sound natural in meetings, interviews, classes, and everyday
+  conversation.
+- **Professionals who work in English** — rehearse presentations, client calls,
+  and interviews, and steadily close the gap between "correct" and "native".
+- **Self-driven learners aiming for native-level fluency** — turn daily speaking
+  into a measurable, compounding climb instead of practice you forget by tomorrow.
+
+---
+
 ## Features
 
 - 🎙️ **Ready-made coaching prompt** — paste it into the Claude app and start a native-level voice session (conversation + listening) right away.
