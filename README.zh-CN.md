@@ -120,6 +120,14 @@ skill 第一次创建时会**把完整路径打印给你**。
 | `next-focus.md` | 衔接卡；含一段可直接贴进 App 的下次重点 |
 | `backups/` | 每次写入前的带时间戳快照（留最近 10 份） |
 
+### data.csv 列
+
+```
+date,cefr,ielts,native,fluency,lexis,grammar,pronunciation,discourse,interaction,listening
+```
+
+每个维度 1–10 分；`native` 是「距母语」满分 100；某个维度无法判断（如纯文本时的发音）记为 `NA`。
+
 ### 标注标签（在 `transcripts.md` 里）
 
 | 标签 | 含义 |
